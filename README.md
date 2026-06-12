@@ -52,8 +52,6 @@ task1主题
 四、分块算法说明
 ----------------
 
-  分块是验收的重点，算法如下：
-
   1. 读取文件全部内容，得到总字节数 total_len
   2. 设置随机数种子：random.seed(seed)
   3. 从文件开头开始，循环生成每块长度：
@@ -61,7 +59,7 @@ task1主题
      while 还有未处理的字节:
          remaining = 剩余字节数
          if remaining <= Lmax:
-             最后一块 = remaining（可以小于Lmin，这是正常的）
+             最后一块 = remaining
          else:
              块长度 = random.randint(Lmin, Lmax)
          记录这块的起始位置和长度
